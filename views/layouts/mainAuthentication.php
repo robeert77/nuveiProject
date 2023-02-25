@@ -10,7 +10,7 @@
 </head>
 <body>
     <section class="container my-5">
-        <?php if ($_SESSION['success_registration']) { ?>
+        <?php if (isset($_SESSION['success_registration']) && $_SESSION['success_registration']) { ?>
             <div class="row">
                 <div class="alert alert-success col-sm-8" role="alert">
                     <h3 class="text-capitalize mt-1">Success!</h3>
