@@ -32,7 +32,7 @@ class UserModel extends Model {
         $result = array();
 
         foreach ($rows as $row) {
-            $result[$row['id']] = $row['title'];
+            $result[$row['id']] = $row['username'];
         }
 
         return $result;
