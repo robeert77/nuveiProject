@@ -88,18 +88,6 @@ class Model {
            }
        }
 
-       // foreach ($columns as $field => $type) {
-       //     if (isset($param[$field])) {
-       //         $result['type'] .= $type;
-       //         $result['values'][] = $param[$field];
-       //     }
-       //
-       //     if (isset($param["!" . $field])) {
-       //         $result['type'] .= $type;
-       //         $result['values'][] = $param["!" . $field];
-       //     }
-       // }
-
        return $result;
    }
 

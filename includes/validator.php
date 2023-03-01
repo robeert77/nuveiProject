@@ -1,8 +1,6 @@
 <?php
 namespace includes;
 
-use \models\UserModel;
-
 class Validator {
     private $data;
     private $rules;
@@ -108,8 +106,10 @@ class Validator {
 
     private function unique($value, $field, $parameters) {
         $className = '\\models\\' . $parameters[0] . 'Model';
-        $fieldModel = new $className();
-        $doesExist = $fieldModel->getOne(array($field => $value));
+        $methodName = 'getOne';
+        $args = array($field => $value);
+
+        $doesExist = (new $className)->{$methodName}($args);
 
         if ($doesExist) {
             return 'This ' . $field . ' is already taken and have to be unique.';
